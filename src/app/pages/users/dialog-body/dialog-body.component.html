@@ -1,0 +1,34 @@
+<h2 mat-dialog-title> <span *ngIf="!data">Add</span> <span *ngIf="data">Edit</span> User</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field style="width:100%">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" autocomplete="off">
+      <mat-error *ngIf="form.controls.name.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+
+    <mat-form-field style=" width:100%">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" autocomplete="off">
+      <mat-error *ngIf="form.controls.email.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+
+    <mat-form-field style=" width:100%">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" autocomplete="off">
+      <mat-error *ngIf="form.controls.phone.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+
+    <mat-form-field style=" width:100%">
+      <mat-label>Website</mat-label>
+      <input matInput formControlName="website" autocomplete="off">
+      <mat-error *ngIf="form.controls.website.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel </button>
+  <button mat-button [disabled]="form.invalid" [mat-dialog-close]="form.value">Ok</button>
+</mat-dialog-actions>

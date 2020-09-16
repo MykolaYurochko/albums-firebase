@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "musik-lib": {
+      "hosting": {
+        "hw5-services": [
+          "musik-lib"
+        ]
+      }
+    }
+  }
+}
