@@ -1,7 +1,13 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>{{title}}</span>
+  <div class="main">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+  </div>
+  <div class="links">
+    <a routerLink='albums'>albums</a>
+    <a routerLink='pokemons'>pokemons</a>
+  </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
